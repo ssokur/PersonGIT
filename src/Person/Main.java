@@ -1,10 +1,10 @@
-package sample;
+package Person;
 
 public class Main
 {
 
     public static void main(String[] args)
     {
-//        fdbgdfbgd
+        System.out.println("args = [" + args + "]");
     }
 }
