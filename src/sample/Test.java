@@ -2,5 +2,5 @@ package sample;
 
 public class Test
 {
-    // gbpfdfldlfhjasf
+    // Test GIT Hub
 }
