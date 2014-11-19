@@ -7,5 +7,6 @@ public class Main
     {
         System.out.println("args = [" + args + "]");
         // Test massage
+        // fgfdhj
     }
 }
