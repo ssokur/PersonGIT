@@ -2,6 +2,9 @@ package src.GUI_Pers;
 
 
 
+import src.GUI_Pers.Lockale_Person;
+import src.GUI_Pers.ToolBar_Person;
+
 import java.util.ResourceBundle;
 
 public class Data_Person

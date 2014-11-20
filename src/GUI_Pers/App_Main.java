@@ -1,6 +1,4 @@
-package src.Ener;
-
-import src.GUI_Pers.Frame_Person;
+package src.GUI_Pers;
 
 /**
  * Created by Artem on 20.11.14.
