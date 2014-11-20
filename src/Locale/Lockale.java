@@ -1,11 +1,11 @@
-package src.GUI;
+package src.Locale;
 
 import java.util.ResourceBundle;
 
 /**
  * Created by Artem on 20.11.14.
  */
-public class Lockale_Person
+public class Lockale
 {
         public static ResourceBundle BANDLE;
         public static String[] languige = {"en_EN", "ru_RU", "ua_UA"};

@@ -1,10 +1,12 @@
 package src.GUI;
 
+import src.API.Commands;
+
 import javax.swing.*;
 
-public class Menu_Person extends JMenuBar
+public class Main_Menu extends JMenuBar
 {
-    public Menu_Person(Data_Person dataIn, Command_Person comandsIn)
+    public Main_Menu(Data_Person dataIn, Commands comandsIn)
     {
         JMenu       mOper      		= new JMenu 	(dataIn.res.getString("PersTitlle.Oper"));
         JMenuItem   miOper_SQL  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_SQL"));

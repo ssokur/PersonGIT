@@ -1,4 +1,4 @@
-package API;
+package src.Locale;
 
 import java.io.UnsupportedEncodingException;
 

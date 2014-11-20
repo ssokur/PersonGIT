@@ -1,5 +1,7 @@
 package src.GUI;
 
+import src.API.Commands;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,23 +10,23 @@ import java.awt.*;
  */
 public class Frame_Person extends JFrame
 {
-        public General_Panel panel;
-        public Menu_Person menu;
-        ToolBar_Person tBar;
-        StatBar_Person stBar;
+        General_Panel panel;
+        Main_Menu menu;
+        ToolBar tBar;
+        StatBar stBar;
 
-        Command_Person comands;
+        Commands comands;
         Data_Person data;
 
         public Frame_Person() {
             data = new Data_Person();
-            comands = new Command_Person();
+            comands = new Commands();
             initJFrame(data.res.getString("PersTitlle.Title"));
 
-            menu = new Menu_Person(data, comands);
+            menu = new Main_Menu(data, comands);
 
-            tBar = new ToolBar_Person(data, comands);
-            stBar	= new StatBar_Person(comands);
+            tBar = new ToolBar(data, comands);
+            stBar	= new StatBar(comands);
             panel 	= new General_Panel(stBar, comands);
 
             setJMenuBar(menu);

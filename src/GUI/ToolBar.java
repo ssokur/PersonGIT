@@ -1,10 +1,12 @@
         package src.GUI;
 
+        import src.API.Commands;
+
         import javax.swing.*;
 
-public class ToolBar_Person extends JToolBar
+public class ToolBar extends JToolBar
 {
-    public ToolBar_Person(Data_Person dataIn, Command_Person comandsIn)
+    public ToolBar(Data_Person dataIn, Commands comandsIn)
     {
         JButton     TSQL    =   new JButton(dataIn.res.getString("PersTitlle.iOper_SQL"));
         JButton     TMon    =   new JButton(dataIn.res.getString("PersTitlle.iOper_Mongo"));
