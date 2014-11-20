@@ -1,7 +1,7 @@
 import API.DAL_Pers;
 import GUI.Frame_Pers;
 
-public class Main
+public class Main_Pers
 {
     public static void main(String[] args)
     {
