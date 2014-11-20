@@ -7,5 +7,7 @@ public class Main_Pers
     {
         new DAL_Pers();
         new Frame_Pers();
+
+        // test commit
     }
 }
