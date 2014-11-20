@@ -2,9 +2,6 @@ package src.Locale;
 
 import java.util.ResourceBundle;
 
-/**
- * Created by Artem on 20.11.14.
- */
 public class Lockale
 {
         public static ResourceBundle BANDLE;

@@ -15,20 +15,28 @@ public class DAL_Person
 //        new DAO_XML();
     }
 
-    void create(Person p) throws SQLException, ClassNotFoundException {
+    void create(Person p) throws SQLException, ClassNotFoundException
+    {
         pd.create(p);
     }
 
-    public ArrayList<Person> read() throws SQLException, ClassNotFoundException {
+    public ArrayList<Person> readall() throws SQLException, ClassNotFoundException
+    {
         return pd.read();
     }
 
-    void delete(Person p) throws SQLException, ClassNotFoundException {
+    private Person read()
+    {
+        return pd.read();
+    }
+
+    void delete(Person p) throws SQLException, ClassNotFoundException
+    {
         pd.delete(p);
     }
 
-    void update(Person p) throws SQLException, ClassNotFoundException {
+    void update(Person p) throws SQLException, ClassNotFoundException
+    {
         pd.update(p);
     }
-
 }
