@@ -1,4 +1,4 @@
-package src.GUI_Pers;
+package src.GUI;
 
 import java.util.ResourceBundle;
 

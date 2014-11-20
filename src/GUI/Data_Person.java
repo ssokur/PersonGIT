@@ -1,9 +1,6 @@
-package src.GUI_Pers;
+package src.GUI;
 
 
-
-import src.GUI_Pers.Lockale_Person;
-import src.GUI_Pers.ToolBar_Person;
 
 import java.util.ResourceBundle;
 

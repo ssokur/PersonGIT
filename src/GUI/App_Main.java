@@ -1,8 +1,4 @@
-package src.GUI_Pers;
-
-/**
- * Created by Artem on 20.11.14.
- */
+package src.GUI;
 
 public class App_Main
 {

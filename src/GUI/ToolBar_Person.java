@@ -1,4 +1,4 @@
-        package src.GUI_Pers;
+        package src.GUI;
 
         import javax.swing.*;
 
