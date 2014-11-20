@@ -1,6 +1,6 @@
-package GUI;
+package src.GUI_Pers;
 
-import API.Lockale_Person;
+
 
 import java.util.ResourceBundle;
 
