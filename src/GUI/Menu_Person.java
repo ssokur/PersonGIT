@@ -13,7 +13,7 @@ public class Menu_Person extends JMenuBar
         JMenuItem   miOper_XML  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_XML"));
         JMenuItem   miOper_Exit  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_Exit"));
 
-        JMenu      mHelp      		= new JMenu     (dataIn.res.getString("PersTitlle.Help"));
+        JMenu       mHelp      		= new JMenu     (dataIn.res.getString("PersTitlle.Help"));
         JMenuItem   miHelp_Help     = new JMenuItem (dataIn.res.getString("PersTitlle.iHelp_Help"));
         JMenuItem   miHelp_About    = new JMenuItem (dataIn.res.getString("PersTitlle.iHelp_About"));
 
