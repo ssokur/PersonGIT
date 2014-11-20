@@ -1,11 +1,11 @@
-import API.DAL_Pers;
-import GUI.Frame_Pers;
+import API.DAL_Person;
+import GUI.Frame_Person;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        new DAL_Pers();
-        new Frame_Pers();
+        new DAL_Person();
+        new Frame_Person();
     }
 }
