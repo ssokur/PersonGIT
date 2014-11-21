@@ -11,9 +11,7 @@ public class Commands
     public ToJSON      	actionJSON      = new ToJSON();
     public ToXML      	actionXML      	= new ToXML();
     public ToExit      	actionExit      = new ToExit();
-
     public LangChoise  	actionLang      = new LangChoise();
-
     public About 		actionAbout  	= new About();
     public Help 		actionHelp  	= new Help();
 
