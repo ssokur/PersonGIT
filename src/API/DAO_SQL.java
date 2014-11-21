@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public class DAO_SQL implements CRUD_Function
 
 {
-//============================================================
+//=============================================================================
 // Connect to MySQL
-//============================================================
+//============================================================================
 
-    String user = "root";                               //Логин пользователя
-    String password = "Password";                           //Пароль пользователя
-    String url = "jdbc:mysql://localhost/person";      //URL адрес
-    String driver = "com.mysql.jdbc.Driver";              //Имя драйвера
+    String user = "root";                             //Логин пользователя
+    String password = "Password";                     //Пароль пользователя
+    String url = "jdbc:mysql://localhost/person";     //URL адрес
+    String driver = "com.mysql.jdbc.Driver";          //Имя драйвера
 
     @Override
     public void create(Person p) throws SQLException, ClassNotFoundException {
