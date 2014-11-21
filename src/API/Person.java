@@ -8,15 +8,15 @@ public class Person extends ArrayList<Person> {
 	public String LName;
 	public int Age;
 
-	public Person(int id, String fName, String lName, int age)	
-	{	
-		this.Id = id;
-		FName = fName;
-		LName = lName;
-		Age = age;
+	public Person() {
+		setId(Id);
+		this.setFName(FName);
+		this.setLName(LName);
+		setAge(Age);
 	}
-	
-	public int 		getId() 
+
+
+	public int 		getId()
 	{
 		return Id;
 	}
