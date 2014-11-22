@@ -9,7 +9,6 @@ import java.text.ParseException;
 
 public class Commands
 {
-
     public CreateListener evCreate = new CreateListener();
     public ReadListener evRead = new ReadListener();
     public UpdateListener evUpdate = new UpdateListener();
@@ -22,7 +21,7 @@ public class Commands
 
     DataModel dm = null;
     DAL_Person dalPerson = null;
-    PanelWork pw = null;
+    public PanelWork pw = null;
 
     public Commands(DataModel dm) throws ParseException
     {
@@ -46,7 +45,7 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
-
+            JOptionPane.showMessageDialog(null, "Данный функционал находиться в стадии реализации!!!");
         }
     }
 
@@ -83,7 +82,7 @@ public class Commands
     class FileExit implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
         {
-            JOptionPane.showMessageDialog(null, "Корректный выход Exit !!!");
+            JOptionPane.showMessageDialog(null, "Exit was correct !!!");
             System.exit(0);
         }
     }

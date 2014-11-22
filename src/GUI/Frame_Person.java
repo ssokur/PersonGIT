@@ -9,13 +9,14 @@ import java.text.ParseException;
 
 public class Frame_Person extends JFrame
 {
-    Main_Menu menu;
-    ToolBar tBar;
-    StatBar stBar;
-    Commands comands;
-    Data_Person data;
-    PanelButton Pbtn;
-    DataModel dataModel;
+    Main_Menu menu; // init main mane
+    ToolBar tBar; // init toolbar
+    StatBar stBar; // init Status Bar
+    Commands comands; // init class with commands
+    Data_Person data; // init class with structure Person ArrayList
+    PanelButton Pbtn;   // init panel for 4 buttons
+    DataModel dataModel; // init class with ArrayList structure
+    PanelWork tablePerson;
 
     public Frame_Person() throws ParseException {
         dataModel = new DataModel();
@@ -26,24 +27,29 @@ public class Frame_Person extends JFrame
         stBar = new StatBar(comands);
         Pbtn = new PanelButton(comands);
 
-        initJFrame(data.res.getString("PersTitlle.Title"));
+        tablePerson = new PanelWork(dataModel);
+        comands.pw = tablePerson;
 
+        add(tablePerson, BorderLayout.CENTER);
         add(Pbtn, BorderLayout.AFTER_LAST_LINE);
+        add(tBar, BorderLayout.BEFORE_FIRST_LINE);
 
         setJMenuBar(menu);
-        add(tBar, BorderLayout.NORTH);
-        add(stBar);
-
-        setVisible(true);
-    }
-
-    private void initJFrame(String titleIn) {
-        setLayout(new BorderLayout());
-        setTitle(titleIn);
-        setDefaultLookAndFeelDecorated(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(460, 420));
+        setPreferredSize(new Dimension(600, 600));
         pack();
-        setLocationRelativeTo(null);
+        setDefaultCloseOperation(Frame_Person.EXIT_ON_CLOSE);
+        setVisible(true);
+
+//        initJFrame(data.res.getString("PersTitlle.Title"));
     }
+
+//    private void initJFrame(String titleIn) {
+//        setLayout(new BorderLayout());
+//        setTitle(titleIn);
+//        setDefaultLookAndFeelDecorated(true);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setPreferredSize(new Dimension(460, 420));
+//        pack();
+//        setLocationRelativeTo(null);
+//    }
 }
