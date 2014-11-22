@@ -28,14 +28,13 @@ public class Main_Menu extends JMenuBar
         add(mmHelp);
         mmHelp.add(mmAbout);
 
-//        mmFileCreate.       addActionListener(cmd.evCreate);
-//        mmFileRead.         addActionListener(cmd.evRead);
-//        mmFileUpdate.       addActionListener(cmd.evUpdate);
-//        mmFileDelete.       addActionListener(cmd.evDelete);
-//        mmHelp.             addActionListener(cmd.evAbout);
-//        mmAbout.            addActionListener(cmd.evAbout);
-//        mmExit.             addActionListener(cmd.evExit);
-
+        mmFileCreate.addActionListener(cmd.evCreate);
+        mmFileRead.addActionListener(cmd.evRead);
+        mmFileUpdate.addActionListener(cmd.evUpdate);
+        mmFileDelete.addActionListener(cmd.evDelete);
+        mmHelp.addActionListener(cmd.evAbout);
+        mmAbout.addActionListener(cmd.evAbout);
+        mmExit.addActionListener(cmd.evExit);
 
         mmFileCreate.setAccelerator(KeyStroke.getKeyStroke("ctrl 1"));
         mmFileRead.setAccelerator(KeyStroke.getKeyStroke("ctrl 2"));

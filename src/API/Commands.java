@@ -1,50 +1,86 @@
 package src.API;
 
+import src.GUI.PanelWork;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 
 public class Commands
 {
-    public ToSQL      	actionSQL      	= new ToSQL();
-    public ToMongo    	actionMongo     = new ToMongo();
-    public ToJSON      	actionJSON      = new ToJSON();
-    public ToXML      	actionXML      	= new ToXML();
-    public ToExit      	actionExit      = new ToExit();
-    public LangChoise  	actionLang      = new LangChoise();
-    public About 		actionAbout  	= new About();
-    public Help 		actionHelp  	= new Help();
 
-    class ToSQL implements ActionListener
+    public CreateListener evCreate = new CreateListener();
+    public ReadListener evRead = new ReadListener();
+    public UpdateListener evUpdate = new UpdateListener();
+    public DeleteListener evDelete = new DeleteListener();
+    public AboutListener evAbout = new AboutListener();
+    public FileExit evExit = new FileExit();
+    public LangChoise exLang = new LangChoise();
+    public About exAbout = new About();
+    public Help exHelp = new Help();
+
+    DataModel dm = null;
+    DAL_Person dalPerson = null;
+    PanelWork pw = null;
+
+    public Commands(DataModel dm) throws ParseException
     {
-        public void actionPerformed(ActionEvent arg0)
+        this.dm = dm;
+        dalPerson = new DAL_Person();
+    }
+
+    class CreateListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(null, "Функционал SQL находится в стадии реализации!!!");
+            // show dialog
+            // get data from dialog
+            // dalPerson.create( p );
+            // update view
         }
     }
-    class ToMongo implements ActionListener
+
+    class ReadListener implements ActionListener
     {
-        public void actionPerformed(ActionEvent arg0)
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(null, "Функционал Mongo находится в стадии реализации!!!");
+
         }
     }
-    class ToJSON implements ActionListener
+
+    class UpdateListener implements ActionListener
     {
-        public void actionPerformed(ActionEvent arg0)
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(null, "Функционал JSON находится в стадии реализации!!!");
+            // show dialog
+            // get data from dialog
+            // dalPerson.update( p );
+            // update view
         }
     }
-    class ToXML implements ActionListener
+
+    class DeleteListener implements ActionListener
     {
-        public void actionPerformed(ActionEvent arg0)
-        {
-            JOptionPane.showMessageDialog(null, "Функционал XML находится в стадии реализации!!!");
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // show dialog
+            // get data from dialog
+            // dalPerson.delete( p );
+            // update view
         }
     }
-    class ToExit implements ActionListener
-    {
+
+    class AboutListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(null, "Данный функционал находиться в стадии реализации!!!");
+        }
+    }
+
+    class FileExit implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
         {
             JOptionPane.showMessageDialog(null, "Корректный выход Exit !!!");

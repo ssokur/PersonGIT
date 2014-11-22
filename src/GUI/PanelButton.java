@@ -16,9 +16,9 @@ public class PanelButton extends JPanel {
         add(edit);
         add(delete);
 
-//        create. addActionListener(cmd.);
-//        read.   addActionListener(cmd.evRead);
-//        edit.   addActionListener(cmd.evUpdate);
-//        delete. addActionListener(cmd.evDelete);
+        create.addActionListener(cmd.evCreate);
+        read.addActionListener(cmd.evRead);
+        edit.addActionListener(cmd.evUpdate);
+        delete.addActionListener(cmd.evDelete);
     }
 }

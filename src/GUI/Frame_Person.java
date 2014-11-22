@@ -1,9 +1,11 @@
 package src.GUI;
 
 import src.API.Commands;
+import src.API.DataModel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.ParseException;
 
 public class Frame_Person extends JFrame
 {
@@ -13,17 +15,20 @@ public class Frame_Person extends JFrame
     Commands comands;
     Data_Person data;
     PanelButton Pbtn;
+    DataModel dataModel;
 
-    public Frame_Person() {
-
+    public Frame_Person() throws ParseException {
+        dataModel = new DataModel();
         data = new Data_Person();
-        comands = new Commands();
+        comands = new Commands(dataModel);
         menu = new Main_Menu(comands);
         tBar = new ToolBar(comands);
         stBar = new StatBar(comands);
         Pbtn = new PanelButton(comands);
 
         initJFrame(data.res.getString("PersTitlle.Title"));
+
+        add(Pbtn, BorderLayout.AFTER_LAST_LINE);
 
         setJMenuBar(menu);
         add(tBar, BorderLayout.NORTH);
