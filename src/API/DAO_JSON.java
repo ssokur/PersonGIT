@@ -19,7 +19,7 @@ public class DAO_JSON implements CRUD_Function {
         JSONParser parser = new JSONParser();
         JSONObject a = null;
         try {
-            a = (JSONObject) parser.parse(new FileReader("\\file2.json"));
+            a = (JSONObject) parser.parse(new FileReader("\\Library\\data.json"));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -102,7 +102,7 @@ public class DAO_JSON implements CRUD_Function {
         obj.put("LName", LName);
         obj.put("Age", Age);
         try {
-            FileWriter file = new FileWriter("d:\\file2.json");
+            FileWriter file = new FileWriter("d:\\Library\\data.json");
             file.write(obj.toJSONString());
             file.flush();
             file.close();

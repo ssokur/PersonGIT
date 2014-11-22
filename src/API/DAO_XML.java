@@ -20,7 +20,7 @@ public class DAO_XML implements CRUD_Function {
 
     DAO_XML() {
         try {
-            File fXmlFile = new File("\\oleg2.xml");
+            File fXmlFile = new File("\\Library\\data.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
@@ -134,7 +134,7 @@ public class DAO_XML implements CRUD_Function {
             e.printStackTrace();
         }
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File("\\oleg2.xml"));
+        StreamResult result = new StreamResult(new File("\\Library\\data.xml"));
         try {
             transformer.transform(source, result);
         } catch (TransformerException e) {
