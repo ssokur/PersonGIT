@@ -18,14 +18,15 @@ public class Frame_Person extends JFrame
     DataModel dataModel;    // init class with ArrayList structure
     PanelWork tablePerson;  // init table for data
 
-    public Frame_Person() throws ParseException {
-        dataModel = new DataModel(); //data
-        data = new Data_Person();
-        comands = new Commands(dataModel);
-        menu = new Main_Menu(comands);
-        tBar = new ToolBar(comands);
-        stBar = new StatBar(comands);
-        Pbtn = new PanelButton(comands);
+    public Frame_Person() throws ParseException
+    {
+        dataModel       = new DataModel(); //data
+        data            = new Data_Person(); //
+        comands         = new Commands(dataModel);
+        menu            = new Main_Menu(comands);
+        tBar            = new ToolBar(comands);
+        stBar           = new StatBar(comands);
+        Pbtn            = new PanelButton(comands);
 
         tablePerson = new PanelWork(dataModel);
         comands.pw = tablePerson;
