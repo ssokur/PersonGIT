@@ -14,26 +14,34 @@ public class Frame_Person extends JFrame
     StatBar stBar;          // init Status Bar
     Commands comands;       // init class with commands
     Data_Person data;       // init class with structure Person ArrayList
-    PanelButton Pbtn;       // init panel for 4 buttons
+    PanelButton pbtn;       // init panel for 4 buttons
     DataModel dataModel;    // init class with ArrayList structure
     PanelWork tablePerson;  // init table for data
 
     public Frame_Person() throws ParseException
     {
+        setLayout(null);
+
         dataModel       = new DataModel();
         data            = new Data_Person();
         comands         = new Commands(dataModel);
         menu            = new Main_Menu(comands);
         tBar            = new ToolBar(comands);
-        stBar           = new StatBar(comands);
-        Pbtn            = new PanelButton(comands);
+        stBar           = new StatBar(comands, data);
+        pbtn = new PanelButton(comands);
 
         tablePerson     = new PanelWork(dataModel);
         comands.pw      = tablePerson;
 
-        add(tablePerson, BorderLayout.CENTER);      // add panel with table data
-        add(Pbtn, BorderLayout.AFTER_LAST_LINE);    // add panel with buttons
-        add(tBar, BorderLayout.BEFORE_FIRST_LINE);  // add panel with toolBar
+        tBar.setBounds(0,0,590,20);
+        tablePerson.setBounds(0,25,590,390);
+        pbtn.setBounds(0,470,590,40);
+        stBar.setBounds(0,510,586,30);
+
+        add(tBar);  // add panel with toolBar
+        add(tablePerson);      // add panel with table data
+        add(pbtn);    // add panel with buttons
+        add(stBar);
 
         setJMenuBar(menu);
         setPreferredSize(new Dimension(600, 600));

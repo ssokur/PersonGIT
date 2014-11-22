@@ -12,10 +12,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 
-public class DAO_JSON implements CRUD_Function {
+public class DAO_JSON implements CRUD_Function
+{
     ArrayList<Person> pp = new ArrayList<Person>();
 
-    public DAO_JSON() {
+    public DAO_JSON()
+    {
         JSONParser parser = new JSONParser();
         JSONObject a = null;
         try {
@@ -64,8 +66,10 @@ public class DAO_JSON implements CRUD_Function {
     public void delete(Person p) throws SQLException, ClassNotFoundException
     {
         int Idd = p.getId();
-        for (int i = 0; i < pp.size(); i++) {
-            if (pp.get(i).getId() == Idd) {
+        for (int i = 0; i < pp.size(); i++)
+        {
+            if (pp.get(i).getId() == Idd)
+            {
                 pp.remove(i);
             }
         }
@@ -81,36 +85,43 @@ public class DAO_JSON implements CRUD_Function {
         person.setLName(p.getLName());
         person.setAge(p.getAge());
         int Idd = p.getId();
-        for (int i = 0; i < pp.size(); i++) {
-            if (pp.get(i).getId() == Idd) {
+        for (int i = 0; i < pp.size(); i++)
+        {
+            if (pp.get(i).getId() == Idd)
+            {
                 pp.set(i, person);
             }
         }
         toFile();
     }
 
-    public String toFile() {
+    public String toFile()
+    {
         JSONObject obj = new JSONObject();
         JSONArray Id = new JSONArray();
         JSONArray FName = new JSONArray();
         JSONArray LName = new JSONArray();
         JSONArray Age = new JSONArray();
-        for (int i = 0; i < pp.size(); i++) {
+
+        for (int i = 0; i < pp.size(); i++)
+        {
             Id.add(pp.get(i).getId());
             FName.add(pp.get(i).getFName());
             LName.add(pp.get(i).getLName());
             Age.add(pp.get(i).getAge());
         }
+
         obj.put("Id", Id);
         obj.put("FName", FName);
         obj.put("LName", LName);
         obj.put("Age", Age);
-        try {
+
+        try
+        {
             FileWriter file = new FileWriter("Library\\data.json");
             file.write(obj.toJSONString());
             file.flush();
             file.close();
-
         } catch (IOException e)
         {
             e.printStackTrace();

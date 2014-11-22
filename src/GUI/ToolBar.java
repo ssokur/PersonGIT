@@ -3,8 +3,9 @@
         import src.API.Commands;
 
         import javax.swing.*;
+        import javax.swing.border.CompoundBorder;
 
-public class ToolBar extends JToolBar
+        public class ToolBar extends JToolBar
 {
     public ToolBar(Commands cmd)
     {

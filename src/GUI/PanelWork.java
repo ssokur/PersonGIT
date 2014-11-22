@@ -5,6 +5,7 @@ import src.API.PersonTableModel;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
+import java.awt.*;
 
 public class PanelWork extends JPanel
 {
@@ -13,9 +14,15 @@ public class PanelWork extends JPanel
 
     public PanelWork(DataModel dm)
     {
-        model = new PersonTableModel(dm);
-        table = new JTable(model);
-        add(new JScrollPane(table));
+        model = new PersonTableModel(dm);                   // Обьевление обьекта и = создание нового класса
+        table = new JTable(model);                          // Создание таблицы
+        table.setPreferredSize(new Dimension(600, 600));
+        JScrollPane scrollPane = new JScrollPane(table); // Обьявление и создание  scroll
+
+        scrollPane.setBounds(10, 10, 600, 600);              // Привязка во фрейме с размерами
+//        AlignmentX(super.getAlignmentX());
+
+        add(scrollPane);                                     // Добавление scroll в JPanel
     }
 
 }
