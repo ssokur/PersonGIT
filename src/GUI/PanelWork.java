@@ -9,7 +9,7 @@ import javax.swing.table.TableModel;
 public class PanelWork extends JPanel
 {
     TableModel model = null;
-    JTable table;
+    public JTable table;
 
     public PanelWork(DataModel dm)
     {

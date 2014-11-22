@@ -46,10 +46,9 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
-
             dm.personList = dalPerson.read();
             System.out.println("Data readed");
-
+            pw.table.updateUI();
         }
     }
 
