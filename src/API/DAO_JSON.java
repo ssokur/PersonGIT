@@ -19,7 +19,7 @@ public class DAO_JSON implements CRUD_Function {
         JSONParser parser = new JSONParser();
         JSONObject a = null;
         try {
-            a = (JSONObject) parser.parse(new FileReader("\\Library\\data.json"));
+            a = (JSONObject) parser.parse(new FileReader("Library\\data.json"));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -43,7 +43,8 @@ public class DAO_JSON implements CRUD_Function {
     }
 
     @Override
-    public void create(Person p) throws SQLException, ClassNotFoundException {
+    public void create(Person p) throws SQLException, ClassNotFoundException
+    {
         Person person = new Person();
         person.setId(p.getId());
         person.setFName(p.getFName());
@@ -54,12 +55,14 @@ public class DAO_JSON implements CRUD_Function {
     }
 
     @Override
-    public ArrayList read() throws SQLException, ClassNotFoundException {
+    public ArrayList read() throws SQLException, ClassNotFoundException
+    {
         return pp;
     }
 
     @Override
-    public void delete(Person p) throws SQLException, ClassNotFoundException {
+    public void delete(Person p) throws SQLException, ClassNotFoundException
+    {
         int Idd = p.getId();
         for (int i = 0; i < pp.size(); i++) {
             if (pp.get(i).getId() == Idd) {
@@ -70,7 +73,8 @@ public class DAO_JSON implements CRUD_Function {
     }
 
     @Override
-    public void update(Person p) throws SQLException, ClassNotFoundException {
+    public void update(Person p) throws SQLException, ClassNotFoundException
+    {
         Person person = new Person();
         person.setId(p.getId());
         person.setFName(p.getFName());
@@ -102,7 +106,7 @@ public class DAO_JSON implements CRUD_Function {
         obj.put("LName", LName);
         obj.put("Age", Age);
         try {
-            FileWriter file = new FileWriter("d:\\Library\\data.json");
+            FileWriter file = new FileWriter("Library\\data.json");
             file.write(obj.toJSONString());
             file.flush();
             file.close();
