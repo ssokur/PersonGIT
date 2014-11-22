@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class DAO_JSON implements CRUD_Function {
     ArrayList<Person> pp = new ArrayList<Person>();
 
-    DAO_JSON() {
+    public DAO_JSON() {
         JSONParser parser = new JSONParser();
         JSONObject a = null;
         try {
@@ -107,7 +107,8 @@ public class DAO_JSON implements CRUD_Function {
             file.flush();
             file.close();
 
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
         return null;
