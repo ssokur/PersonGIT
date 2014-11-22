@@ -20,16 +20,16 @@ public class Frame_Person extends JFrame
 
     public Frame_Person() throws ParseException
     {
-        dataModel       = new DataModel(); //data
-        data            = new Data_Person(); //
+        dataModel       = new DataModel();
+        data            = new Data_Person();
         comands         = new Commands(dataModel);
         menu            = new Main_Menu(comands);
         tBar            = new ToolBar(comands);
         stBar           = new StatBar(comands);
         Pbtn            = new PanelButton(comands);
 
-        tablePerson = new PanelWork(dataModel);
-        comands.pw = tablePerson;
+        tablePerson     = new PanelWork(dataModel);
+        comands.pw      = tablePerson;
 
         add(tablePerson, BorderLayout.CENTER);      // add panel with table data
         add(Pbtn, BorderLayout.AFTER_LAST_LINE);    // add panel with buttons
