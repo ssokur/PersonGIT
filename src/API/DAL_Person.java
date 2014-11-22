@@ -25,7 +25,7 @@ public class DAL_Person
         return pd.read();
     }
 
-    private Person read()
+    public Person read()
     {
         return pd.read();
     }

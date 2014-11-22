@@ -9,19 +9,19 @@ import java.text.ParseException;
 
 public class Commands
 {
-    public CreateListener evCreate = new CreateListener();
-    public ReadListener evRead = new ReadListener();
-    public UpdateListener evUpdate = new UpdateListener();
-    public DeleteListener evDelete = new DeleteListener();
-    public AboutListener evAbout = new AboutListener();
-    public FileExit evExit = new FileExit();
-    public LangChoise exLang = new LangChoise();
-    public About exAbout = new About();
-    public Help exHelp = new Help();
+    public CreateListener   evCreate = new CreateListener();
+    public ReadListener     evRead = new ReadListener();
+    public UpdateListener   evUpdate = new UpdateListener();
+    public DeleteListener   evDelete = new DeleteListener();
+    public AboutListener    evAbout = new AboutListener();
+    public FileExit         evExit = new FileExit();
+    public LangChoise       exLang = new LangChoise();
+    public About            exAbout = new About();
+    public Help             exHelp = new Help();
 
-    DataModel dm = null;
-    DAL_Person dalPerson = null;
-    public PanelWork pw = null;
+    DataModel               dm = null;
+    DAL_Person              dalPerson = null;
+    public PanelWork        pw = null;
 
     public Commands(DataModel dm) throws ParseException
     {
@@ -29,7 +29,8 @@ public class Commands
         dalPerson = new DAL_Person();
     }
 
-    class CreateListener implements ActionListener {
+    class CreateListener implements ActionListener
+    {
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -45,7 +46,10 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(null, "Данный функционал находиться в стадии реализации!!!");
+
+            dm.personList = dalPerson.read();
+            System.out.println("Data readed");
+
         }
     }
 
