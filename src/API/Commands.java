@@ -5,6 +5,7 @@ import src.GUI.PanelWork;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.text.ParseException;
 
 public class Commands
@@ -46,7 +47,14 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            dm.personList = dalPerson.read();
+            try
+            {
+                dm.personList = dalPerson.read();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            }
             System.out.println("Data readed");
             pw.table.updateUI();
         }

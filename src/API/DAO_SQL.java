@@ -11,7 +11,7 @@ public class DAO_SQL implements CRUD_Function
 //============================================================================
 
     String user = "root";                             //Логин пользователя
-    String password = "Password";                     //Пароль пользователя
+    String password = "80689574122";                     //Пароль пользователя
     String url = "jdbc:mysql://localhost/person";     //URL адрес
     String driver = "com.mysql.jdbc.Driver";          //Имя драйвера
 

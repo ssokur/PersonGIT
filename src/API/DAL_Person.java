@@ -1,7 +1,6 @@
 package src.API;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class DAL_Person
 {
@@ -9,10 +8,10 @@ public class DAL_Person
 
     public DAL_Person()
     {
-//        new DAO_SQL();
+        new DAO_SQL();
 //        new DAO_Mongo();
 //        new DAO_JSON();
-        new DAO_XML();
+//        new DAO_XML();
     }
 
     void create(Person p) throws SQLException, ClassNotFoundException
@@ -20,12 +19,7 @@ public class DAL_Person
         pd.create(p);
     }
 
-    public ArrayList<Person> readall() throws SQLException, ClassNotFoundException
-    {
-        return pd.read();
-    }
-
-    public Person read()
+    public Person read() throws SQLException, ClassNotFoundException
     {
         return pd.read();
     }
