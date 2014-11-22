@@ -6,44 +6,42 @@ import javax.swing.*;
 
 public class Main_Menu extends JMenuBar
 {
-    public Main_Menu(Data_Person dataIn, Commands comandsIn)
+    public Main_Menu(Commands cmd)
     {
-        JMenu       mOper      		= new JMenu 	(dataIn.res.getString("PersTitlle.Oper"));
-        JMenuItem   miOper_SQL  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_SQL"));
-        JMenuItem   miOper_Mongo  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_Mongo"));
-        JMenuItem   miOper_JSON     = new JMenuItem (dataIn.res.getString("PersTitlle.iOper_JSON"));
-        JMenuItem   miOper_XML  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_XML"));
-        JMenuItem   miOper_Exit  	= new JMenuItem (dataIn.res.getString("PersTitlle.iOper_Exit"));
+        JMenu mmEdit = new JMenu("File");
+        JMenuItem mmFileCreate = new JMenuItem("Create");
+        JMenuItem mmFileRead = new JMenuItem("Read");
+        JMenuItem mmFileUpdate = new JMenuItem("Update");
+        JMenuItem mmFileDelete = new JMenuItem("Delete");
+        JMenuItem mmExit = new JMenuItem("Exit");
 
-        JMenu       mHelp      		= new JMenu     (dataIn.res.getString("PersTitlle.Help"));
-        JMenuItem   miHelp_Help     = new JMenuItem (dataIn.res.getString("PersTitlle.iHelp_Help"));
-        JMenuItem   miHelp_About    = new JMenuItem (dataIn.res.getString("PersTitlle.iHelp_About"));
+        JMenu mmHelp = new JMenu("Help");
+        JMenuItem mmAbout = new JMenuItem("About");
 
-        //
-        mOper.add(miOper_SQL);
-        mOper.add(miOper_Mongo);
-        mOper.add(miOper_JSON);
-        mOper.add(miOper_XML);
-        mOper.add(miOper_Exit);
-        add(mOper);
+        add(mmEdit);
+        mmEdit.add(mmFileCreate);
+        mmEdit.add(mmFileRead);
+        mmEdit.add(mmFileUpdate);
+        mmEdit.add(mmFileDelete);
+        mmEdit.add(mmExit);
 
-        mHelp.add(miHelp_Help);
-        mHelp.add(miHelp_About);
-        add(mHelp);
+        add(mmHelp);
+        mmHelp.add(mmAbout);
 
-        //
-        miOper_SQL.  setAccelerator(KeyStroke.getKeyStroke("ctrl 1"));
-        miOper_Mongo.setAccelerator(KeyStroke.getKeyStroke("ctrl 2"));
-        miOper_JSON. setAccelerator(KeyStroke.getKeyStroke("ctrl 3"));
-        miOper_XML.  setAccelerator(KeyStroke.getKeyStroke("ctrl 4"));
+//        mmFileCreate.       addActionListener(cmd.evCreate);
+//        mmFileRead.         addActionListener(cmd.evRead);
+//        mmFileUpdate.       addActionListener(cmd.evUpdate);
+//        mmFileDelete.       addActionListener(cmd.evDelete);
+//        mmHelp.             addActionListener(cmd.evAbout);
+//        mmAbout.            addActionListener(cmd.evAbout);
+//        mmExit.             addActionListener(cmd.evExit);
 
-        miOper_SQL.addActionListener(comandsIn.actionSQL);
-        miOper_Mongo.addActionListener(comandsIn.actionMongo);
-        miOper_JSON.addActionListener(comandsIn.actionJSON);
-        miOper_XML.addActionListener(comandsIn.actionXML);
-        miOper_Exit.addActionListener(comandsIn.actionExit);
 
-        miHelp_About.addActionListener(comandsIn.actionAbout);
-        miHelp_Help.addActionListener(comandsIn.actionHelp);
+        mmFileCreate.setAccelerator(KeyStroke.getKeyStroke("ctrl 1"));
+        mmFileRead.setAccelerator(KeyStroke.getKeyStroke("ctrl 2"));
+        mmFileUpdate.setAccelerator(KeyStroke.getKeyStroke("ctrl 3"));
+        mmFileDelete.setAccelerator(KeyStroke.getKeyStroke("ctrl 4"));
+        mmExit.setAccelerator(KeyStroke.getKeyStroke("alt f4"));
+
     }
 }
