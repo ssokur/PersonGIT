@@ -17,7 +17,6 @@ public class Commands
     public AboutListener    evAbout = new AboutListener();
     public FileExit         evExit = new FileExit();
     public LangChoise       exLang = new LangChoise();
-    public About            exAbout = new About();
     public Help             exHelp = new Help();
 
     DataModel               dm = null;
@@ -97,25 +96,21 @@ public class Commands
             System.exit(0);
         }
     }
-    class About implements ActionListener
+
+}
+class Help implements ActionListener
+{
+    public void actionPerformed(ActionEvent arg0)
     {
-        public void actionPerformed(ActionEvent arg0)
-        {
-            JOptionPane.showMessageDialog(null, "Функционал About находится в стадии реализации!!!");
-        }
-    }
-    class Help implements ActionListener
-    {
-        public void actionPerformed(ActionEvent arg0)
-        {
-            JOptionPane.showMessageDialog(null, "Функционал Help находится в стадии реализации!!!");
-        }
-    }
-    class LangChoise implements ActionListener
-    {
-        public void actionPerformed(ActionEvent arg0)
-        {
-            JOptionPane.showMessageDialog(null, "Функционал Смены языка находится в стадии реализации!!!");
-        }
+        JOptionPane.showMessageDialog(null, "Функционал Help находится в стадии реализации!!!");
     }
 }
+class LangChoise implements ActionListener
+{
+    public void actionPerformed(ActionEvent arg0)
+    {
+        JOptionPane.showMessageDialog(null, "Функционал Смены языка находится в стадии реализации!!!");
+    }
+}
+
+
