@@ -15,10 +15,12 @@
             <option name="USE_RELATIVE_INDENTS" value="false" />
           </value>
         </option>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="JAVA">
           <indentOptions>
             <option name="LABEL_INDENT_ABSOLUTE" value="true" />
-            <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
           </indentOptions>
         </codeStyleSettings>
       </value>
@@ -26,3 +28,4 @@
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
   </component>
 </project>
+
