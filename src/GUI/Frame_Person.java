@@ -19,7 +19,7 @@ public class Frame_Person extends JFrame
     PanelWork tablePerson;  // init table for data
 
     public Frame_Person() throws ParseException {
-        dataModel = new DataModel();
+        dataModel = new DataModel(); //data
         data = new Data_Person();
         comands = new Commands(dataModel);
         menu = new Main_Menu(comands);
