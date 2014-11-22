@@ -20,8 +20,7 @@ public class DAO_XML implements CRUD_Function {
 
     DAO_XML() {
         try {
-
-            File fXmlFile = new File("D:\\oleg2.xml");
+            File fXmlFile = new File("\\oleg2.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
@@ -31,7 +30,6 @@ public class DAO_XML implements CRUD_Function {
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
                     Element eElement = (Element) nNode;
                     Person p = new Person();
                     int idn2 = Integer.parseInt(eElement.getAttribute("id"));
@@ -59,7 +57,6 @@ public class DAO_XML implements CRUD_Function {
         toFile();
     }
 
-
     @Override
     public ArrayList read() throws SQLException, ClassNotFoundException {
         return pp;
@@ -78,7 +75,6 @@ public class DAO_XML implements CRUD_Function {
 
     @Override
     public void update(Person p) throws SQLException, ClassNotFoundException
-
     {
         Person person = new Person();
         person.setId(p.getId());
@@ -112,24 +108,18 @@ public class DAO_XML implements CRUD_Function {
             // staff elements
             Element staff = doc.createElement("Person");
             rootElement.appendChild(staff);
-
             // set attribute to staff element
             Attr attr = doc.createAttribute("id");
             attr.setValue(String.valueOf(pp.get(i).getId()));
             staff.setAttributeNode(attr);
-
-
             // firstname elements
             Element firstname = doc.createElement("firstname");
             firstname.appendChild(doc.createTextNode(String.valueOf(pp.get(i).getFName())));
             staff.appendChild(firstname);
-
             // lastname elements
             Element lastname = doc.createElement("lastname");
             lastname.appendChild(doc.createTextNode(String.valueOf(pp.get(i).getLName())));
             staff.appendChild(lastname);
-
-
             // salary elements
             Element salary = doc.createElement("age");
             salary.appendChild(doc.createTextNode(String.valueOf(pp.get(i).getAge())));
@@ -144,11 +134,7 @@ public class DAO_XML implements CRUD_Function {
             e.printStackTrace();
         }
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File("d:\\oleg2.xml"));
-
-        // Output to console for testing
-        // StreamResult result = new StreamResult(System.out);
-
+        StreamResult result = new StreamResult(new File("\\oleg2.xml"));
         try {
             transformer.transform(source, result);
         } catch (TransformerException e) {
