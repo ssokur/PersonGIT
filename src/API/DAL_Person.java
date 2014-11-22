@@ -1,34 +1,35 @@
 package src.API;
 
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.ArrayList;
 
 public class DAL_Person
 {
-    DAL_Person pd = null;
+    CRUD_Function pd = null;
 
-    public DAL_Person()
+    public DAL_Person() throws ParseException
     {
-        new DAO_SQL();
-//        new DAO_Mongo();
-//        new DAO_JSON();
-//        new DAO_XML();
+
+//        pd = new DAO_SQL();
+//        pd = new DAO_JSON();
+        pd = new DAO_XML();
+//        pd = new DAO_Mongo();
+
     }
 
     void create(Person p) throws SQLException, ClassNotFoundException
     {
         pd.create(p);
     }
-
-    public Person read() throws SQLException, ClassNotFoundException
+    public ArrayList<Person> read() throws SQLException, ClassNotFoundException
     {
         return pd.read();
     }
-
     void delete(Person p) throws SQLException, ClassNotFoundException
     {
         pd.delete(p);
     }
-
     void update(Person p) throws SQLException, ClassNotFoundException
     {
         pd.update(p);
