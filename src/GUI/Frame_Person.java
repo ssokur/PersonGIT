@@ -30,8 +30,8 @@ public class Frame_Person extends JFrame
         tablePerson = new PanelWork(dataModel);
         comands.pw = tablePerson;
 
-        add(tablePerson, BorderLayout.CENTER);
-        add(Pbtn, BorderLayout.AFTER_LAST_LINE);
+        add(tablePerson, BorderLayout.CENTER);      // add panel with table data
+        add(Pbtn, BorderLayout.AFTER_LAST_LINE);    // add panel with buttons
         add(tBar, BorderLayout.BEFORE_FIRST_LINE);
 
         setJMenuBar(menu);
