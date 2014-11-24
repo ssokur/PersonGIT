@@ -10,16 +10,17 @@ public class DAO_SQL implements CRUD_Function
 // Connect to MySQL
 //============================================================================
 
-    String user = "root";                             //Логин пользователя
-    String password = "80689574122";                  //Пароль пользователя
-    String url = "jdbc:mysql://localhost/person";     //URL адрес
-    String driver = "com.mysql.jdbc.Driver";          //Имя драйвера
+    String user         = "root";                               // User
+    String password     = "80689574122";                        // User password
+    String url          = "jdbc:mysql://localhost/person";      // URL db
+    String driver       = "com.mysql.jdbc.Driver";              // Drivers name
 
     @Override
-    public void create(Person p) throws SQLException, ClassNotFoundException {
-        Class.forName(driver);          //Регистрируем драйвер
-        Connection c = DriverManager.getConnection(url, user, password);//Установка соединения с БД
-        Statement st = c.createStatement(); //Готовим запрос
+    public void create(Person p) throws SQLException, ClassNotFoundException
+    {
+        Class.forName(driver);                                              //Driver registered
+        Connection c = DriverManager.getConnection(url, user, password);    //Connected to DB
+        Statement st = c.createStatement();                                 //Готовим запрос
 
         String sql = "INSERT INTO Person VALUES(" + p.getId() + ", '" + p.getFName() + "', '"
                 + p.getLName() + "', " + p.getAge() + ")";
@@ -29,11 +30,12 @@ public class DAO_SQL implements CRUD_Function
     }
 
     @Override
-    public ArrayList read() throws SQLException, ClassNotFoundException {
+    public ArrayList read() throws SQLException, ClassNotFoundException
+    {
         ArrayList<Person> pp = new ArrayList<Person>();
-        Class.forName(driver);//Регистрируем драйвер
-        Connection c = DriverManager.getConnection(url, user, password);//Установка соединения с БД
-        Statement st = c.createStatement();//Готовим запрос
+        Class.forName(driver);                                                  //Driver registered
+        Connection c = DriverManager.getConnection(url, user, password);        //Connected to DB
+        Statement st = c.createStatement();                                     //Готовим запрос
         ResultSet rs = st.executeQuery("SELECT * FROM Person");//Выполняем запрос к БД, результат в переменной rs
 
         while (rs.next()) {
@@ -49,10 +51,11 @@ public class DAO_SQL implements CRUD_Function
     }
 
     @Override
-    public void delete(Person p) throws SQLException, ClassNotFoundException {
-        Class.forName(driver);//Регистрируем драйвер
-        Connection c = DriverManager.getConnection(url, user, password);//Установка соединения с БД
-        Statement st = c.createStatement();//Готовим запрос
+    public void delete(Person p) throws SQLException, ClassNotFoundException
+    {
+        Class.forName(driver);                                              //Driver registered
+        Connection c = DriverManager.getConnection(url, user, password);    //Connected to DB
+        Statement st = c.createStatement();                                 //Готовим запрос
 
         String sql = "UPDATE Person set FName='" + p.getFName() + "', LName='" + p.getLName() + "', " +
                 "Age='" + p.getAge() + "' WHERE ID =" + p.getId() + ";";
@@ -62,10 +65,11 @@ public class DAO_SQL implements CRUD_Function
     }
 
     @Override
-    public void update(Person p) throws SQLException, ClassNotFoundException {
-        Class.forName(driver);//Регистрируем драйвер
-        Connection c = DriverManager.getConnection(url, user, password);//Установка соединения с БД
-        Statement st = c.createStatement();//Готовим запрос
+    public void update(Person p) throws SQLException, ClassNotFoundException
+    {
+        Class.forName(driver);                                              //Driver registered
+        Connection c = DriverManager.getConnection(url, user, password);    //Connected to DB
+        Statement st = c.createStatement();                                 //Готовим запрос
 
         String sql = "DELETE  FROM Person WHERE ID = (" + p.getId() + ")";
         System.out.println(sql);
