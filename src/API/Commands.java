@@ -10,14 +10,14 @@ import java.text.ParseException;
 
 public class Commands
 {
-    public CreateListener   evCreate = new CreateListener();
-    public ReadListener     evRead = new ReadListener();
-    public UpdateListener   evUpdate = new UpdateListener();
-    public DeleteListener   evDelete = new DeleteListener();
-    public AboutListener    evAbout = new AboutListener();
-    public FileExit         evExit = new FileExit();
-    public LangChoise       exLang = new LangChoise();
-    public Help             exHelp = new Help();
+    public CreateListener   evCreate    = new CreateListener();
+    public ReadListener     evRead      = new ReadListener();
+    public UpdateListener   evUpdate    = new UpdateListener();
+    public DeleteListener   evDelete    = new DeleteListener();
+    public AboutListener    evAbout     = new AboutListener();
+    public FileExit         evExit      = new FileExit();
+    public LangChoise       exLang      = new LangChoise();
+    public Help             exHelp      = new Help();
 
     DataModel               dm = null;
     DAL_Person              dalPerson = null;
@@ -74,7 +74,8 @@ public class Commands
     class DeleteListener implements ActionListener
     {
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e)
+        {
             // show dialog
             // get data from dialog
             // dalPerson.delete( p );
@@ -82,14 +83,17 @@ public class Commands
         }
     }
 
-    class AboutListener implements ActionListener {
+    class AboutListener implements ActionListener
+    {
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e)
+        {
             JOptionPane.showMessageDialog(null, "Данный функционал находиться в стадии реализации!!!");
         }
     }
 
-    class FileExit implements ActionListener {
+    class FileExit implements ActionListener
+    {
         public void actionPerformed(ActionEvent arg0)
         {
             JOptionPane.showMessageDialog(null, "Exit was correct !!!");
@@ -97,20 +101,19 @@ public class Commands
         }
     }
 
-}
-class Help implements ActionListener
-{
-    public void actionPerformed(ActionEvent arg0)
+
+    class Help implements ActionListener
     {
-        JOptionPane.showMessageDialog(null, "Функционал Help находится в стадии реализации!!!");
+        public void actionPerformed(ActionEvent arg0)
+        {
+            JOptionPane.showMessageDialog(null, "Функционал Help находится в стадии реализации!!!");
+        }
+    }
+    class LangChoise implements ActionListener
+    {
+        public void actionPerformed(ActionEvent arg0)
+        {
+            JOptionPane.showMessageDialog(null, "Функционал Смены языка находится в стадии реализации!!!");
+        }
     }
 }
-class LangChoise implements ActionListener
-{
-    public void actionPerformed(ActionEvent arg0)
-    {
-        JOptionPane.showMessageDialog(null, "Функционал Смены языка находится в стадии реализации!!!");
-    }
-}
-
-
