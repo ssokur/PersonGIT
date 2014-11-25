@@ -57,7 +57,7 @@ public class DAO_XML implements CRUD_Function
         person.setLName(p.getLName());
         person.setAge(p.getAge());
         pp.add(p);
-//        toFile();
+        toFile();
     }
 
     @Override
