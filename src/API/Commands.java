@@ -5,6 +5,7 @@ import src.GUI.PanelWork;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.text.ParseException;
 
@@ -24,7 +25,11 @@ public class Commands {
 
     public Commands(DataModel dm) throws ParseException {
         this.dm = dm;
-        dalPerson = new DAL_Person();
+        try {
+            dalPerson = new DAL_Person();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
     }
 
     // ===================================================================================
@@ -60,7 +65,6 @@ public class Commands {
             } catch (ClassNotFoundException e1) {
                 e1.printStackTrace();
             }
-            System.out.println("Data readed");
             pw.table.updateUI();
         }
     }
@@ -69,6 +73,16 @@ public class Commands {
     {
         @Override
         public void actionPerformed(ActionEvent e) {
+            InputDialog in = new InputDialog();  // Создаем новый класс extends JDialog для получения новой персоны
+            in.setVisible(true);                // делаем видимым диалог
+            try {
+                dalPerson.update(in.getPerson()); // записываем в базу или файл новую персону
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            }
+            pw.table.updateUI();                  // Обновляем таблицу
             // show dialog
             // get data from dialog
             // dalPerson.update( p );

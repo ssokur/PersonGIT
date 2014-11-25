@@ -14,8 +14,8 @@ public class DAL_Person
 
 //        pd = new DAO_SQL();
 //        pd = new DAO_JSON();
-//        pd = new DAO_XML();
-        pd = new DAO_Mongo();
+        pd = new DAO_XML();
+//        pd = new DAO_Mongo();
     }
 
     void create(Person p) throws SQLException, ClassNotFoundException
