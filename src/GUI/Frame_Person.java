@@ -10,14 +10,14 @@ import java.text.ParseException;
 
 public class Frame_Person extends JFrame
 {
-    Main_Menu menu;         // init main mane
-    ToolBar tBar;           // init toolbar
-    StatBar stBar;          // init Status Bar
-    Commands comands;       // init class with commands
-    Data_Person data;       // init class with structure Person ArrayList
-    PanelButton pbtn;       // init panel for 4 buttons
-    DataModel dataModel;    // init class with ArrayList structure
-    PanelWork tablePerson;  // init table for data
+    Main_Menu       menu;         // init main mane
+    ToolBar         tBar;         // init toolbar
+    StatBar         stBar;        // init Status Bar
+    Commands        comands;      // init class with commands
+    Data_Person     data;         // init class with structure Person ArrayList
+    PanelButton     pbtn;         // init panel for 4 buttons
+    DataModel       dataModel;    // init class with ArrayList structure
+    PanelWork       tablePerson;  // init table for data
 
     public Frame_Person() throws ParseException, UnknownHostException
     {
