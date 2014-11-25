@@ -38,7 +38,8 @@ public class DAO_SQL implements CRUD_Function
         Statement st = c.createStatement();                                     //Готовим запрос
         ResultSet rs = st.executeQuery("SELECT * FROM Person");//Выполняем запрос к БД, результат в переменной rs
 
-        while (rs.next()) {
+        while (rs.next())
+        {
             Person p = new Person();
             p.setId(rs.getInt("Id"));
             p.setFName(rs.getString(2));
