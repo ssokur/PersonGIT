@@ -39,14 +39,14 @@ Person person = new Person();
         add(lbl3);
         add(lbl4);
 
-        txt_ID = new JTextField();               // Инициализация поля "куда вводится текст"
-        txt_FN = new JTextField();
-        txt_LN = new JTextField();
+        txt_ID  = new JTextField();               // Инициализация поля "куда вводится текст"
+        txt_FN  = new JTextField();
+        txt_LN  = new JTextField();
         txt_Age = new JTextField();
 
-        txt_ID.setBounds(130, 20, 120, 18);     // setBounds - установить размеры, привязка ПОЛЯ во фрейме
-        txt_FN.setBounds(130, 50, 120, 18);
-        txt_LN.setBounds(130, 80, 120, 18);
+        txt_ID. setBounds(130, 20, 120, 18);     // setBounds - установить размеры, привязка ПОЛЯ во фрейме
+        txt_FN. setBounds(130, 50, 120, 18);
+        txt_LN. setBounds(130, 80, 120, 18);
         txt_Age.setBounds(130, 110, 120, 18);
 
         add(txt_ID);                              // Добавление поля в рамку фрейм
@@ -57,28 +57,30 @@ Person person = new Person();
         JButton btnOk = new JButton("OK");           // созлдаем 2 кнопки
         JButton btnCancel = new JButton("Cancel");
 
-        btnOk.setBounds(30, 140, 100, 22);           // рамеры кнопок
-        btnCancel.setBounds(150, 140, 100, 22);
+        btnOk.      setBounds(30, 140, 100, 22);           // рамеры кнопок
+        btnCancel.  setBounds(150, 140, 100, 22);
 
         add(btnOk);                                       // добавление кнопок
         add(btnCancel);
 
-        btnOk.addActionListener(new ActionOk());      //  добавление действия пользователя
-        btnCancel.addActionListener(new ActionCancel());
+        btnOk.      addActionListener(new ActionOk());      //  добавление действия пользователя
+        btnCancel.  addActionListener(new ActionCancel());
     }
 
     public String getResult() {
         return what_button;
     }
 
-    public void setPerson() {
-        txt_ID.setText(String.valueOf(person.Id));
-        txt_FN.setText(person.FName);
-        txt_LN.setText(person.LName);
+    public void setPerson()
+    {
+        txt_ID. setText(String.valueOf(person.Id));
+        txt_FN. setText(person.FName);
+        txt_LN. setText(person.LName);
         txt_Age.setText(String.valueOf(person.Age));
     }
 
-    public Person getPerson() {
+    public Person getPerson()
+    {
 
         person.Id = Integer.parseInt(txt_ID.getText());
         person.FName = txt_FN.getText();
@@ -87,18 +89,21 @@ Person person = new Person();
         return person;
     }
 
-
-    class ActionOk implements ActionListener {
+    class ActionOk implements ActionListener
+    {
         @Override
-        public void actionPerformed(ActionEvent arg0) {
+        public void actionPerformed(ActionEvent arg0)
+        {
             what_button = "ok";
             setVisible(false);
         }
     }
 
-    class ActionCancel implements ActionListener {
+    class ActionCancel implements ActionListener
+    {
         @Override
-        public void actionPerformed(ActionEvent arg0) {
+        public void actionPerformed(ActionEvent arg0)
+        {
             what_button = "cancel";
             setVisible(false);
         }

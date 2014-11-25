@@ -29,9 +29,11 @@ public class DAO_XML implements CRUD_Function
             doc.getDocumentElement().normalize();
             System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
             NodeList nList = doc.getElementsByTagName("Person");
-            for (int temp = 0; temp < nList.getLength(); temp++) {
+            for (int temp = 0; temp < nList.getLength(); temp++)
+            {
                 Node nNode = nList.item(temp);
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                if (nNode.getNodeType() == Node.ELEMENT_NODE)
+                {
                     Element eElement = (Element) nNode;
                     Person p = new Person();
                     int idn2 = Integer.parseInt(eElement.getAttribute("id"));
@@ -70,8 +72,10 @@ public class DAO_XML implements CRUD_Function
     public void delete(Person p) throws SQLException, ClassNotFoundException
     {
         int Idd = p.getId();
-        for (int i = 0; i < pp.size(); i++) {
-            if (pp.get(i).getId() == Idd) {
+        for (int i = 0; i < pp.size(); i++)
+        {
+            if (pp.get(i).getId() == Idd)
+            {
                 pp.remove(i);
             }
         }
@@ -87,15 +91,18 @@ public class DAO_XML implements CRUD_Function
         person.setLName(p.getLName());
         person.setAge(p.getAge());
         int Idd = p.getId();
-        for (int i = 0; i < pp.size(); i++) {
-            if (pp.get(i).getId() == Idd) {
+        for (int i = 0; i < pp.size(); i++)
+        {
+            if (pp.get(i).getId() == Idd)
+            {
                 pp.set(i, p);
             }
         }
         toFile();
     }
 
-    public void toFile() {
+    public void toFile()
+    {
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = null;
@@ -109,7 +116,8 @@ public class DAO_XML implements CRUD_Function
         Document doc = docBuilder.newDocument();
         Element rootElement = doc.createElement("Person_DAO");
         doc.appendChild(rootElement);
-        for (int i = 0; i < pp.size(); i++) {
+        for (int i = 0; i < pp.size(); i++)
+        {
             // staff elements
             Element staff = doc.createElement("Person");
             rootElement.appendChild(staff);

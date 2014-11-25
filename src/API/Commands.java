@@ -5,6 +5,7 @@ import src.GUI.PanelWork;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.text.ParseException;
 
@@ -23,7 +24,7 @@ public class Commands
     DAL_Person              dalPerson = null;
     public PanelWork        pw = null;
 
-    public Commands(DataModel dm) throws ParseException
+    public Commands(DataModel dm) throws ParseException, UnknownHostException
     {
         this.dm = dm;
         dalPerson = new DAL_Person();

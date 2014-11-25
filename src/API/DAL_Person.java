@@ -1,5 +1,6 @@
 package src.API;
 
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -8,14 +9,13 @@ public class DAL_Person
 {
     CRUD_Function pd = null;
 
-    public DAL_Person() throws ParseException
+    public DAL_Person() throws ParseException, UnknownHostException
     {
 
 //        pd = new DAO_SQL();
 //        pd = new DAO_JSON();
-        pd = new DAO_XML();
-//        pd = new DAO_Mongo();
-
+//        pd = new DAO_XML();
+        pd = new DAO_Mongo();
     }
 
     void create(Person p) throws SQLException, ClassNotFoundException

@@ -5,6 +5,7 @@ import src.API.DataModel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.UnknownHostException;
 import java.text.ParseException;
 
 public class Frame_Person extends JFrame
@@ -18,7 +19,7 @@ public class Frame_Person extends JFrame
     DataModel dataModel;    // init class with ArrayList structure
     PanelWork tablePerson;  // init table for data
 
-    public Frame_Person() throws ParseException
+    public Frame_Person() throws ParseException, UnknownHostException
     {
         setLayout(null);
 
