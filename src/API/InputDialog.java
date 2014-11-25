@@ -5,7 +5,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class InputDialig extends JDialog {
+public class InputDialog extends JDialog
+{
 Person person = new Person();
 
     JTextField txt_ID = null;                // Создаем поля для ввода текста
@@ -15,7 +16,7 @@ Person person = new Person();
 
     public String what_button = "";
 
-    public InputDialig()            // создаем диалоговое окно
+    public InputDialog()            // создаем диалоговое окно
     {
         super();
         setModal(true);

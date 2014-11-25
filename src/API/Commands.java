@@ -34,7 +34,7 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
-           InputDialig in = new InputDialig();  // Создаем новый класс extends JDialog для получения новой персоны
+           InputDialog in = new InputDialog();  // Создаем новый класс extends JDialog для получения новой персоны
             in.setVisible(true);                // делаем видимым диалог
             try {
                 dalPerson.create(in.getPerson()); // записываем в базу или файл новую персону
