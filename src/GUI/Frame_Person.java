@@ -29,7 +29,7 @@ public class Frame_Person extends JFrame
         menu            = new Main_Menu(comands);
         tBar            = new ToolBar(comands);
         stBar           = new StatBar(comands, data);
-        pbtn = new PanelButton(comands);
+        pbtn            = new PanelButton(comands);
 
         tablePerson     = new PanelWork(dataModel);
         comands.pw      = tablePerson;
