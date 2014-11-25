@@ -5,6 +5,8 @@ import javax.swing.table.AbstractTableModel;
 public class PersonTableModel extends AbstractTableModel {
     DataModel dm = null;
 
+    final String[] colNames = {"Id", "FName", "LName", "Age"};
+
     public PersonTableModel(DataModel dm) {
         this.dm = dm;
     }
@@ -16,23 +18,13 @@ public class PersonTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return colNames.length;
     }
 
     @Override
     public String getColumnName(int columnIndex) {
-        switch (columnIndex) {
-            case 0:
-                return "Id()";
-            case 1:
-                return "FName()";
-            case 2:
-                return "LName()";
-            case 3:
-                return "Age()";
 
-        }
-        return "";
+        return colNames[columnIndex];
     }
 
     @Override
@@ -58,11 +50,32 @@ public class PersonTableModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return false;
+        return true;
     }
 
     @Override
-    public void setValueAt(Object value, int rowIndex, int columnIndex) {
+    public void setValueAt(Object value, int rowIndex, int columnIndex)
+    {
+        String val = (String) value;
+        System.out.println(rowIndex + " x " + columnIndex + ": " + value);
+        Person p = new Person(dm.personList.get(rowIndex).Id,
+                dm.personList.get(rowIndex).FName,
+                dm.personList.get(rowIndex).LName,
+                dm.personList.get(rowIndex).Age);
+        String str = null;
+        str = PersonTableModel.this.getColumnName(columnIndex);
+        if (str.equals("Id")) {
+            p.setId(Integer.valueOf(val));
+        } else if (str.equals("FName")) {
+            p.setFName( val);
+        } else if (str.equals("LName")) {
+            p.setLName(val);
+        } else if (str.equals("Age")) {
+            p.setAge(Integer.valueOf(val));
+        }
+        dm.personList.set(rowIndex,p);
+        System.out.println(PersonTableModel.this.getValueAt(rowIndex, columnIndex));
 
     }
+
 }

@@ -1,22 +1,26 @@
 package src.API;
 
-import java.util.ArrayList;
-
-public class Person extends ArrayList<Person> {
+public class Person  {
 	public int Id;
 	public String FName;
 	public String LName;
 	public int Age;
 
-	public Person() {
+    public Person(int id, String FName, String LName, int age) {
+        Id = id;
+        this.FName = FName;
+        this.LName = LName;
+        Age = age;
+    }
+
+    public Person() {
 		setId(Id);
 		this.setFName(FName);
 		this.setLName(LName);
 		setAge(Age);
 	}
 
-
-	public int 		getId()
+    public int 		getId()
 	{
 		return Id;
 	}
