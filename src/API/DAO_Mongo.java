@@ -24,7 +24,7 @@ public class DAO_Mongo  implements CRUD_Function
 
     /**** Get collection / table from 'testdb' ****/
     // if collection doesn't exists, MongoDB will create it for you
-    DBCollection table = db.getCollection("user");
+    DBCollection table = db.getCollection("person");
 
 
     @Override
@@ -61,7 +61,7 @@ public class DAO_Mongo  implements CRUD_Function
     public void delete(Person p) throws SQLException, ClassNotFoundException
     {
 
-        DBCollection table = db.getCollection("user");
+        DBCollection table = db.getCollection("person");
         BasicDBObject searchQuery = new BasicDBObject();
         searchQuery.put("FName", p);
         table.remove(searchQuery);
