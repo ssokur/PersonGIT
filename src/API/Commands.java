@@ -34,6 +34,16 @@ public class Commands
         @Override
         public void actionPerformed(ActionEvent e)
         {
+           InputDialig in = new InputDialig();  // Создаем новый класс extends JDialog для получения новой персоны
+            in.setVisible(true);                // делаем видимым диалог
+            try {
+                dalPerson.create(in.getPerson()); // записываем в базу или файл новую персону
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            }
+            pw.table.updateUI();                  // Обновляем таблицу
             // show dialog
             // get data from dialog
             // dalPerson.create( p );
