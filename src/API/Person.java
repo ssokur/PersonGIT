@@ -1,8 +1,7 @@
 package src.API;
 
-import java.util.ArrayList;
-
-public class Person extends ArrayList<Person> {
+public class Person
+{
 	public int Id;
 	public String FName;
 	public String LName;
