@@ -1,6 +1,8 @@
 package src.API;
 
 import javax.swing.table.AbstractTableModel;
+import java.sql.SQLException;
+import java.text.ParseException;
 
 public class PersonTableModel extends AbstractTableModel {
     DataModel dm = null;
@@ -75,8 +77,20 @@ public class PersonTableModel extends AbstractTableModel {
             p.setAge(Integer.valueOf(val));
         }
         dm.personList.set(rowIndex,p);
-        System.out.println(PersonTableModel.this.getValueAt(rowIndex, columnIndex));
+        try {
+            DAL_Person dp = new DAL_Person();
+            try {
+                dp.update(p);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
+        System.out.println(PersonTableModel.this.getValueAt(rowIndex, columnIndex));
     }
 
 }
