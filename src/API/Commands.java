@@ -94,13 +94,13 @@ public class Commands {
     {
         @Override
         public void actionPerformed(ActionEvent e) {
-            String id = JOptionPane.showInputDialog(null, "Enter ID");
-            int idn = Integer.valueOf(id);
-            for (int i = 0; i < dm.personList.size(); i++)
+            String id = JOptionPane.showInputDialog(null, "Enter ID"); // Создаем диалог
+            int idn = Integer.valueOf(id);                              // текстовое поле переводим в инт
+            for (int i = 0; i < dm.personList.size(); i++)              // Создаем цикл в котором находим айди в листе соотв значению ид введенном в таблице
             {
                 if (dm.personList.get(i).Id == idn) {
                     try {
-                        dalPerson.delete(dm.personList.get(i));
+                        dalPerson.delete(dm.personList.get(i));         //выполняем функцию делит
                     } catch (SQLException e1) {
                         e1.printStackTrace();
                     } catch (ClassNotFoundException e1) {
@@ -108,7 +108,7 @@ public class Commands {
                     }
                 }
             }
-            pw.table.updateUI();
+            pw.table.updateUI();                                        // обновляем таблицу
             // show dialog
 //            get data from dialog
 //            dalPerson.delete( p );
