@@ -4,7 +4,8 @@ import javax.swing.table.AbstractTableModel;
 import java.sql.SQLException;
 import java.text.ParseException;
 
-public class PersonTableModel extends AbstractTableModel {
+public class PersonTableModel extends AbstractTableModel
+{
     DataModel dm = null;
 
     final String[] colNames = {"Id", "FName", "LName", "Age"};

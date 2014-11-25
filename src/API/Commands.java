@@ -18,7 +18,7 @@ public class Commands
     public FileExit         evExit      = new FileExit();
     public LangChoise       exLang      = new LangChoise();
     public Help             exHelp      = new Help();
-
+// ===================================================================================
     DataModel               dm = null;
     DAL_Person              dalPerson = null;
     public PanelWork        pw = null;
@@ -28,8 +28,8 @@ public class Commands
         this.dm = dm;
         dalPerson = new DAL_Person();
     }
-
-    class CreateListener implements ActionListener
+// ===================================================================================
+    class CreateListener implements ActionListener   // Listener for Button Create
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -50,8 +50,7 @@ public class Commands
             // update view
         }
     }
-
-    class ReadListener implements ActionListener
+    class ReadListener implements ActionListener  // Listener for Button Read
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -68,8 +67,7 @@ public class Commands
             pw.table.updateUI();
         }
     }
-
-    class UpdateListener implements ActionListener
+    class UpdateListener implements ActionListener  // Listener for Button Update data
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -80,8 +78,7 @@ public class Commands
             // update view
         }
     }
-
-    class DeleteListener implements ActionListener
+    class DeleteListener implements ActionListener  // Listener for Button Delete
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -92,8 +89,8 @@ public class Commands
             // update view
         }
     }
-
-    class AboutListener implements ActionListener
+// ===================================================================================
+    class AboutListener implements ActionListener // Listener for Button About
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -101,8 +98,7 @@ public class Commands
             JOptionPane.showMessageDialog(null, "Данный функционал находиться в стадии реализации!!!");
         }
     }
-
-    class FileExit implements ActionListener
+    class FileExit implements ActionListener    // Listener for Button Exit
     {
         public void actionPerformed(ActionEvent arg0)
         {
@@ -110,16 +106,14 @@ public class Commands
             System.exit(0);
         }
     }
-
-
-    class Help implements ActionListener
+    class Help implements ActionListener        // Listener for Button Help
     {
         public void actionPerformed(ActionEvent arg0)
         {
             JOptionPane.showMessageDialog(null, "Функционал Help находится в стадии реализации!!!");
         }
     }
-    class LangChoise implements ActionListener
+    class LangChoise implements ActionListener  // Listener for Button Choose lang. For Artem in future
     {
         public void actionPerformed(ActionEvent arg0)
         {

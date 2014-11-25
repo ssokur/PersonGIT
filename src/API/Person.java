@@ -1,12 +1,14 @@
 package src.API;
 
-public class Person  {
+public class Person
+{
 	public int Id;
 	public String FName;
 	public String LName;
 	public int Age;
 
-    public Person(int id, String FName, String LName, int age) {
+    public Person(int id, String FName, String LName, int age)
+	{
         Id = id;
         this.FName = FName;
         this.LName = LName;
