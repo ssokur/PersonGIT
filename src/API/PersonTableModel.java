@@ -66,7 +66,8 @@ public class PersonTableModel extends AbstractTableModel {
         str = PersonTableModel.this.getColumnName(columnIndex);
         if (str.equals("Id")) {
             p.setId(Integer.valueOf(val));
-        } else if (str.equals("FName")) {
+        } else if (str.equals("FName"))
+        {
             p.setFName( val);
         } else if (str.equals("LName")) {
             p.setLName(val);
