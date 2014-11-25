@@ -1,6 +1,7 @@
 package src.API;
 
 import javax.swing.table.AbstractTableModel;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.text.ParseException;
 
@@ -88,6 +89,8 @@ public class PersonTableModel extends AbstractTableModel
                 e.printStackTrace();
             }
         } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (UnknownHostException e) {
             e.printStackTrace();
         }
 
