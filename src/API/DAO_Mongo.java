@@ -16,15 +16,17 @@ public class DAO_Mongo  implements CRUD_Function
     public DAO_Mongo() throws UnknownHostException
     {
         mongo = new MongoClient("localhost", 27017);
+        db = mongo.getDB("testdb");
+        table = db.getCollection("user");
     }
 // =================================================================================
     /**** Get database ****/
     // if database doesn't exists, MongoDB will create it for you
-    DB db = mongo.getDB("testdb");
+    DB db;
 
     /**** Get collection / table from 'testdb' ****/
     // if collection doesn't exists, MongoDB will create it for you
-    DBCollection table = db.getCollection("person");
+    DBCollection table;
 // =================================================================================
 
     @Override
