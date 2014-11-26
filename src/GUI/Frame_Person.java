@@ -35,7 +35,7 @@ public class Frame_Person extends JFrame
         comands.pw      = tablePerson;
 
         tBar.           setBounds(0,0,590,30);
-        tablePerson.    setBounds(0,25,590,550);
+        tablePerson.    setBounds(0,30,590,540);
         pbtn.           setBounds(0,570,590,40);
         stBar.          setBounds(0,510,586,30);
 
