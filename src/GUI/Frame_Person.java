@@ -34,18 +34,18 @@ public class Frame_Person extends JFrame
         tablePerson     = new PanelWork(dataModel);
         comands.pw      = tablePerson;
 
-        tBar.setBounds(0,0,590,20);
-        tablePerson.setBounds(0,25,590,390);
-        pbtn.setBounds(0,470,590,40);
-        stBar.setBounds(0,510,586,30);
+        tBar.           setBounds(0,0,590,30);
+        tablePerson.    setBounds(0,25,590,550);
+        pbtn.           setBounds(0,570,590,40);
+        stBar.          setBounds(0,510,586,30);
 
-        add(tBar);  // add panel with toolBar
-        add(tablePerson);      // add panel with table data
-        add(pbtn);    // add panel with buttons
-        add(stBar);
+        add(tBar);          // add panel with toolBar
+        add(tablePerson);   // add panel with table data
+        add(pbtn);          // add panel with buttons
+//        add(stBar);
 
         setJMenuBar(menu);
-        setPreferredSize(new Dimension(600, 600));
+        setPreferredSize(new Dimension(600, 680));
         pack();
         setDefaultCloseOperation(Frame_Person.EXIT_ON_CLOSE);
         setVisible(true);

@@ -16,13 +16,10 @@ public class PanelWork extends JPanel
     {
         model = new PersonTableModel(dm);                   // Обьевление обьекта и = создание нового класса
         table = new JTable(model);                          // Создание таблицы
-        table.setPreferredSize(new Dimension(600, 600));
-        JScrollPane scrollPane = new JScrollPane(table); // Обьявление и создание  scroll
-
-        scrollPane.setBounds(10, 10, 600, 600);              // Привязка во фрейме с размерами
-//        AlignmentX(super.getAlignmentX());
-
-        add(scrollPane);                                     // Добавление scroll в JPanel
+        table.setPreferredSize(new Dimension(600, 700));
+        JScrollPane scrollPane = new JScrollPane(table);    // Обьявление и создание  scroll
+        scrollPane.setBounds(10, 10, 500, 500);             // Привязка во фрейме с размерами
+        add(scrollPane);                                    // Добавление scroll в JPanel
     }
 
 }
