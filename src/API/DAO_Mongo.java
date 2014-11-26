@@ -17,7 +17,7 @@ public class DAO_Mongo  implements CRUD_Function
     {
         mongo = new MongoClient("localhost", 27017);
     }
-
+// =================================================================================
     /**** Get database ****/
     // if database doesn't exists, MongoDB will create it for you
     DB db = mongo.getDB("testdb");
@@ -25,7 +25,7 @@ public class DAO_Mongo  implements CRUD_Function
     /**** Get collection / table from 'testdb' ****/
     // if collection doesn't exists, MongoDB will create it for you
     DBCollection table = db.getCollection("person");
-
+// =================================================================================
 
     @Override
     public void create(Person p) throws SQLException, ClassNotFoundException
@@ -76,7 +76,7 @@ public class DAO_Mongo  implements CRUD_Function
         query.put("FName", p.getFName());               // old data
 
         BasicDBObject newDocument = new BasicDBObject();
-        newDocument.put("FName", "mkyong-updated");     // new data
+        newDocument.put("FName", p);     // new data
 
         BasicDBObject updateObj = new BasicDBObject();
         updateObj.put("$set", newDocument);
