@@ -18,7 +18,7 @@ public class Commands
     public AboutListener    evAbout = new AboutListener();
     public FileExit         evExit = new FileExit();
     public LangChoise       exLang = new LangChoise();
-    public Help exHelp = new Help();
+    public Help             exHelp = new Help();
     // ===================================================================================
     DataModel dm = null;
     DAL_Person dalPerson = null;
