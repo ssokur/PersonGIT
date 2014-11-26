@@ -9,21 +9,23 @@ import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.text.ParseException;
 
-public class Commands {
-    public CreateListener evCreate = new CreateListener();
-    public ReadListener evRead = new ReadListener();
-    public UpdateListener evUpdate = new UpdateListener();
-    public DeleteListener evDelete = new DeleteListener();
-    public AboutListener evAbout = new AboutListener();
-    public FileExit evExit = new FileExit();
-    public LangChoise exLang = new LangChoise();
+public class Commands
+{
+    public CreateListener   evCreate = new CreateListener();
+    public ReadListener     evRead = new ReadListener();
+    public UpdateListener   evUpdate = new UpdateListener();
+    public DeleteListener   evDelete = new DeleteListener();
+    public AboutListener    evAbout = new AboutListener();
+    public FileExit         evExit = new FileExit();
+    public LangChoise       exLang = new LangChoise();
     public Help exHelp = new Help();
     // ===================================================================================
     DataModel dm = null;
     DAL_Person dalPerson = null;
     public PanelWork pw = null;
 
-    public Commands(DataModel dm) throws ParseException {
+    public Commands(DataModel dm) throws ParseException
+    {
         this.dm = dm;
         try {
             dalPerson = new DAL_Person();
