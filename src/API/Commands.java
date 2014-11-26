@@ -74,10 +74,12 @@ public class Commands
     class UpdateListener implements ActionListener  // Listener for Button Update data
     {
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e)
+        {
             InputDialog in = new InputDialog();  // Создаем новый класс extends JDialog для получения новой персоны
-            in.setVisible(true);                // делаем видимым диалог
-            try {
+            in.setVisible(true);                // делаем видимым диало
+            try
+            {
                 dalPerson.update(in.getPerson()); // записываем в базу или файл новую персону
             } catch (SQLException e1) {
                 e1.printStackTrace();
@@ -101,6 +103,7 @@ public class Commands
             for (int i = 0; i < dm.personList.size(); i++)              // Создаем цикл в котором находим айди в листе соотв значению ид введенном в таблице
             {
                 if (dm.personList.get(i).Id == idn) {
+                    dm.personList.get(i);
                     try {
                         dalPerson.delete(dm.personList.get(i));         //выполняем функцию делит
                     } catch (SQLException e1) {

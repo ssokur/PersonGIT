@@ -16,8 +16,8 @@ public class DAO_Mongo  implements CRUD_Function
     public DAO_Mongo() throws UnknownHostException
     {
         mongo = new MongoClient("localhost", 27017);
-        db = mongo.getDB("testdb");
-        table = db.getCollection("user");
+        db = mongo.getDB("Person");
+        table = db.getCollection("person");
     }
 // =================================================================================
     /**** Get database ****/
@@ -32,40 +32,46 @@ public class DAO_Mongo  implements CRUD_Function
     @Override
     public void create(Person p) throws SQLException, ClassNotFoundException
     {
+        System.out.println(p.getAge());
         /**** Insert ****/
         // create a document to store key and value
         BasicDBObject document = new BasicDBObject();
         document.put("ID",      p.getId());
         document.put("FName",   p.getFName());
         document.put("LName",   p.getLName());
-        document.put("Аge",     p.getAge());
+        document.put("Age",     p.getAge());
+        System.out.println(document);
         table.insert(document);
-        System.out.println(table);
     }
 
     @Override
     public ArrayList read() throws SQLException, ClassNotFoundException
     {
         /**** Find and display ****/
-        BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("FName", "mkyong");
-        DBCursor cursor = table.find(searchQuery);
+        DBCursor cursor = table.find();
+        System.out.println(table);
+
+        ArrayList<Person> pp = new ArrayList<Person>();
 
         while (cursor.hasNext())
         {
-            System.out.println(cursor.next());
+            DBObject actpers = cursor.next();
+            Person p = new Person();
+            p.setId((Integer) actpers.get("ID"));
+            p.setFName(String.valueOf(actpers.get("FName")));
+            p.setLName(String.valueOf(actpers.get("LName")));
+            p.setAge((Integer) actpers.get("Age"));
+            pp.add(p);
         }
-        // need to chance signature
-        return null;
+        return pp;
     }
 
     @Override
     public void delete(Person p) throws SQLException, ClassNotFoundException
     {
-
         DBCollection table = db.getCollection("person");
         BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("FName", p);
+        searchQuery.put("ID", p.getId());
         table.remove(searchQuery);
     }
 
@@ -74,14 +80,21 @@ public class DAO_Mongo  implements CRUD_Function
     {
         /**** Update ****/
         // search document where name="mkyong" and update it with new values
+
         BasicDBObject query = new BasicDBObject();
-        query.put("FName", p.getFName());               // old data
+        query.put("Id", p.getId());               // old data
 
         BasicDBObject newDocument = new BasicDBObject();
-        newDocument.put("FName", p);     // new data
+
+//        newDocument.put("Id",    p.getId());        // new data
+        newDocument.put("FName", p.getFName());     // new data
+        newDocument.put("LName", p.getLName());     // new data
+        newDocument.put("Age",   p.getAge());       // new data
+        System.out.println(newDocument);
 
         BasicDBObject updateObj = new BasicDBObject();
         updateObj.put("$set", newDocument);
+        System.out.println(updateObj);
 
         table.update(query, updateObj);
     }

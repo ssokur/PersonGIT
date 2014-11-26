@@ -52,7 +52,7 @@ public class DAO_SQL implements CRUD_Function
     }
 
     @Override
-    public void delete(Person p) throws SQLException, ClassNotFoundException
+    public void update(Person p) throws SQLException, ClassNotFoundException
     {
         Class.forName(driver);                                              //Driver registered
         Connection c = DriverManager.getConnection(url, user, password);    //Connected to DB
@@ -66,7 +66,7 @@ public class DAO_SQL implements CRUD_Function
     }
 
     @Override
-    public void update(Person p) throws SQLException, ClassNotFoundException
+    public void delete (Person p) throws SQLException, ClassNotFoundException
     {
         Class.forName(driver);                                              //Driver registered
         Connection c = DriverManager.getConnection(url, user, password);    //Connected to DB
