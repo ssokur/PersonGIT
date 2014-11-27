@@ -1,5 +1,8 @@
 <component name="libraryTable">
   <library name="DB">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
+    </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Library/XML/JAXP_160.jar!/" />
       <root url="jar://$PROJECT_DIR$/Library/XML/jdom-2.0.5.jar!/" />
@@ -9,11 +12,22 @@
       <root url="jar://$PROJECT_DIR$/Library/DB/h2-1.3.176.jar!/" />
       <root url="jar://$PROJECT_DIR$/Library/DB/mysql-connector-java-5.1.33-bin.jar!/" />
       <root url="jar://$PROJECT_DIR$/Library/DB/mongo-java-driver-2.12.4.jar!/" />
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
+    </NATIVE>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/Library/XML" />
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
+      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/Library/Hibernate" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/Library/Hibernate" recursive="false" type="SOURCES" />
     <jarDirectory url="file://$PROJECT_DIR$/Library/XML" recursive="false" type="SOURCES" />
   </library>
 </component>

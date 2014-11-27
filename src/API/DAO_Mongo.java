@@ -79,10 +79,10 @@ public class DAO_Mongo  implements CRUD_Function
     public void update(Person p) throws SQLException, ClassNotFoundException
     {
         /**** Update ****/
-        // search document where name="mkyong" and update it with new values
+        // search document where ID="...." and update it with new values
 
         BasicDBObject query = new BasicDBObject();
-        query.put("Id", p.getId());               // old data
+        query.put("Id", p.getId());               // old data, find key Id
 
         BasicDBObject newDocument = new BasicDBObject();
 

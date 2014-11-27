@@ -26,18 +26,21 @@ public class PersonTableModel extends AbstractTableModel
     }
 
     @Override
-    public String getColumnName(int columnIndex) {
+    public String getColumnName(int columnIndex)
+    {
 
         return colNames[columnIndex];
     }
 
     @Override
-    public int getRowCount() {
+    public int getRowCount()
+    {
         return dm.personList.size();
     }
 
     @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
+    public Object getValueAt(int rowIndex, int columnIndex)
+    {
         Person bean = dm.personList.get(rowIndex);
         switch (columnIndex) {
             case 0:
