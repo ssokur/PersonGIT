@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class DAO_Mongo  implements CRUD_Function
 {
-
     /**** Connect to MongoDB ****/
     // Since 2.10.0, uses MongoClient
     MongoClient mongo;

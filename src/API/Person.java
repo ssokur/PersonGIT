@@ -1,7 +1,6 @@
 package src.API;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
 @Entity 				// указывает на то, что данный класс является сущностью.
@@ -39,8 +38,6 @@ public class Person
 		this.setLName(LName);
 		setAge(Age);
 	}
-
-
 
     public int 		getId()
 	{

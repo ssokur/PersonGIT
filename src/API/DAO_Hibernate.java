@@ -1,11 +1,12 @@
 package src.API;
 
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class DAO_Hibernate implements CRUD_Function
 
@@ -56,7 +57,8 @@ public class DAO_Hibernate implements CRUD_Function
     }
 
     @Override
-    public void delete(Person p) throws SQLException, ClassNotFoundException {
+    public void delete(Person p) throws SQLException, ClassNotFoundException
+    {
         Session session = null;
         try {
             session = HibernateUtil.getSessionFactory().openSession();
