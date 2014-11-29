@@ -27,7 +27,6 @@ public class DAO_XML implements CRUD_Function
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             doc.getDocumentElement().normalize();
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
             NodeList nList = doc.getElementsByTagName("Person");
             for (int temp = 0; temp < nList.getLength(); temp++)
             {
@@ -49,7 +48,6 @@ public class DAO_XML implements CRUD_Function
             e.printStackTrace();
         }
     }
-
     @Override
     public void create(Person p) throws SQLException, ClassNotFoundException
     {
@@ -67,7 +65,6 @@ public class DAO_XML implements CRUD_Function
     {
         return pp;
     }
-
     @Override
     public void delete(Person p) throws SQLException, ClassNotFoundException
     {
@@ -81,7 +78,6 @@ public class DAO_XML implements CRUD_Function
         }
         toFile();
     }
-
     @Override
     public void update(Person p) throws SQLException, ClassNotFoundException
     {
@@ -100,10 +96,8 @@ public class DAO_XML implements CRUD_Function
         }
         toFile();
     }
-
     public void toFile()
     {
-
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = null;
         try {

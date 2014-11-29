@@ -18,9 +18,6 @@
     <JAVADOC>
       <root url="file://$PROJECT_DIR$/Library/Hibernate" />
     </JAVADOC>
-    <NATIVE>
-      <root url="file://$PROJECT_DIR$/Library/Hibernate" />
-    </NATIVE>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/Library/XML" />
       <root url="file://$PROJECT_DIR$/Library/Hibernate" />
