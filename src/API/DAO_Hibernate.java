@@ -20,7 +20,7 @@ public class DAO_Hibernate implements CRUD_Function
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             session.save(p);
-//            session.getTransaction().commit();
+            session.getTransaction().commit();
 
         } catch (Exception e)
         {
