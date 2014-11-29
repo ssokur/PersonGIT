@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class DAO_Hibernate implements CRUD_Function
@@ -38,22 +37,21 @@ public class DAO_Hibernate implements CRUD_Function
     public ArrayList read() throws SQLException, ClassNotFoundException
     {
         Session session = null;
-        List<Person> pers = new ArrayList<Person>();
-//        ArrayList<Person> pers = new ArrayList<Person>();
+        ArrayList<Person> pers = new ArrayList<Person>();
         try
         {
             session = HibernateUtil.getSessionFactory().openSession();
-            pers = session.createCriteria(Person.class).list();
+            pers = (ArrayList<Person>) session.createCriteria(Person.class).list();
         } catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Оќшибка I/O", JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Ошибка I/O", JOptionPane.OK_OPTION);
         } finally {
-            if (session != null && session.isOpen()) {
+            if (session != null && session.isOpen())
+            {
                 session.close();
             }
         }
-
-        return (ArrayList) pers;
+        return pers;
     }
 
     @Override

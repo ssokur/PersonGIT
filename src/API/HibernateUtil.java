@@ -1,6 +1,7 @@
 package src.API;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
 
 public class HibernateUtil
 
@@ -15,8 +16,13 @@ public class HibernateUtil
         try
         {
             //creates the session factory from hibernate.cfg.xml
-            sessionFactory = new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
-        } catch (Exception e) {
+//            sessionFactory = new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
+
+            // Create the SessionFactory from hibernate.cfg.xml
+            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
     }

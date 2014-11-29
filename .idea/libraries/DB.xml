@@ -11,6 +11,7 @@
       <root url="jar://$PROJECT_DIR$/Library/DB/mongo-java-driver-2.12.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/Library/DB/hibernate-annotations-3.4.0.GA.jar!/" />
       <root url="jar://$PROJECT_DIR$/Library/DB/hibernate-core-3.3.2.GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Library/DB/dom4j-2.0.0-ALPHA-2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
