@@ -59,7 +59,8 @@ public class Commands
     class ReadListener implements ActionListener  // Listener for Button Read
     {
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e)
+        {
             try {
                 dm.personList = dalPerson.read();
             } catch (SQLException e1) {

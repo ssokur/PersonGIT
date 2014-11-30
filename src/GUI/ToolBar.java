@@ -1,11 +1,11 @@
-        package src.GUI;
+package src.GUI;
 
-        import src.API.Commands;
+import src.API.Commands;
 
-        import javax.swing.*;
-        import javax.swing.border.CompoundBorder;
+import javax.swing.*;
+import javax.swing.border.CompoundBorder;
 
-        public class ToolBar extends JToolBar
+public class ToolBar extends JToolBar
 {
     public ToolBar(Commands cmd)
     {

@@ -42,6 +42,7 @@ public class DAO_Hibernate implements CRUD_Function
         {
             session = HibernateUtil.getSessionFactory().openSession();
             pers = (ArrayList<Person>) session.createCriteria(Person.class).list();
+            session.getTransaction().commit();
         } catch (Exception e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Ошибка I/O", JOptionPane.OK_OPTION);
