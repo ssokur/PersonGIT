@@ -35,7 +35,8 @@ public class Commands
     }
 
     // ===================================================================================
-    class CreateListener implements ActionListener   // Listener for Button Create
+    // Listener for Button Create
+    class CreateListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -55,8 +56,8 @@ public class Commands
             // update view
         }
     }
-
-    class ReadListener implements ActionListener  // Listener for Button Read
+    // Listener for Button Read
+    class ReadListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -72,7 +73,8 @@ public class Commands
         }
     }
 
-    class UpdateListener implements ActionListener  // Listener for Button Update data
+    // Listener for Button Update data
+    class UpdateListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -95,7 +97,8 @@ public class Commands
         }
     }
 
-    class DeleteListener implements ActionListener  // Listener for Button Delete
+    // Listener for Button Delete
+    class DeleteListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e) {

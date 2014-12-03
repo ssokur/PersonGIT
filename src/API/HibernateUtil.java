@@ -23,7 +23,8 @@ public class HibernateUtil
 
         } catch (Exception e)
         {
-            e.printStackTrace();
+//            e.printStackTrace();
+            throw new ExceptionInInitializerError(e);
         }
     }
 

@@ -10,6 +10,16 @@
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
       </configuration>
     </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="" />
+        <datasource-mapping>
+          <factory-entry name="annotation-processor" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/Library/Hibernate/hibernate-release-4.3.7.Final/project/tooling/metamodel-generator/src/test/resources/org/hibernate/jpamodelgen/test/xmlmapped/persistence.xml" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -86,48 +96,6 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/site/apidocs" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/site/testapidocs" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/integration/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/jcl-over-slf4j/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/jcl-over-slf4j/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/jul-to-slf4j/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/jul-to-slf4j/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/log4j-over-slf4j/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/log4j-over-slf4j/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/osgi-over-slf4j/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-android/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-android/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-api/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-api/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-ext/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-ext/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-jcl/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-jcl/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-jdk14/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-jdk14/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-log4j12/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-log4j12/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-migrator/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-migrator/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-nop/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-nop/src/test/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-simple/src/main/java" />
-          <root url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7/slf4j-simple/src/test/java" />
-        </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/Library/DB/slf4j-1.7.7" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
