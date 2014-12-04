@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="mongo-java-driver-2.12.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/DB/mongo-java-driver-2.12.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/DB/mysql-connector-java-5.1.33-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/XML/JAXP_160.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/JSON/gson-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/JSON/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/JSON/org.json-20120521.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/XML/jdom-2.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../ExternalLibJava/XML/jdom-2.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
